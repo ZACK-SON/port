@@ -1,0 +1,18 @@
+<app-header/>
+<main>
+    <app-kwnowledge/>
+    <app-experiences/>
+
+    <!-- @defer(on viewport): carrega quando scrow chega  no elemento -->
+    @defer(on viewport){
+        <app-projects/>
+    } @placeholder {
+        <section><h2>Carregando todos os projetos desenvolvidos...</h2></section>
+    } @error {
+        <section>
+            <h2>Ocorreu um erro no carregamento do componente, tente novamente...</h2>
+        </section>
+    }
+    
+</main>
+
